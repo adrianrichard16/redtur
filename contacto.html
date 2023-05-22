@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alkatra&family=Delicious+Handrawn&family=Work+Sans:ital@1&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Productos - RedTur</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;1,300&family=Playfair+Display:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/contacto.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+
+    <div class="contenedor">
+        <header class="encabezado">                       
+            <img src="img/Logogif.gif" alt="Logo">
+
+        </header>
+
+
+        <header class="botonera">
+            <div>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#nacional">Nacionales</a></li>
+                    <li><a href="#internacional">Internacionales</a></li>
+                    <li><a href="Contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </header>
+        <header class="dos">
+            <div>
+                <ul>
+                    <li><a href="productos.html"><img src="img/iconos/llamada-telefonica (1).png" alt=""></a></li>
+                    <li><a href="productos.html"><img src="img/iconos/llamada-telefonica.png" alt=""></a></li>
+                    <li><a href="contacto.html"><img src="img/iconos/email.png" alt="Contacto"></a></li>
+                </ul>
+            </div>
+        </header>
+
+    <main class="contenido">
+      <!-- Formulario -->
+      <h1><b>Contacto</b></h1>
+      <br><br>
+      <form action="" class="formulario" id="formulario">
+        <div class="formulario__grupo" id="grupo__usuario">
+            <label for="usuario" class="formulario__label">Usuario</label>
+            <div class="formulario__grupo-input">
+                <input type="text" class="formulario__input" name="usuario" id="usuario" placeholder="usuario123">
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 digitos y solo puede contener
+                numeros, letras y guion bajo.</p>
+        </div>
+
+        <!-- Boton NOMBRE -->
+        <div class="formulario__grupo" id="grupo__nombre">
+            <label for="nombre" class="formulario__label">Nombre</label>
+            <div class="formulario__grupo-input">
+                <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Juan perez">
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">El Nombre tiene que ser de 4 a 16 digitos y solo puede contener
+                numeros, letras y guion bajo.</p>
+        </div>
+
+        <!-- Boton contraseñas -->
+        <div class="formulario__grupo" id="grupo__password">
+            <label for="password" class="formulario__label">Contraseña</label>
+            <div class="formulario__grupo-input">
+                <input type="password" class="formulario__input" name="password" id="password">
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">La contraseña tiene que tener de 4 a 12 digitos.</p>
+        </div>
+
+        <!-- Boton contraseñas 2 -->
+        <div class="formulario__grupo" id="grupo__password2">
+            <label for="password2" class="formulario__label">Repetir Contraseña</label>
+            <div class="formulario__grupo-input">
+                <input type="password" class="formulario__input" name="password2" id="password2">
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">Ambas contraseñas deben ser iguales.</p>
+        </div>
+
+        <!-- Boton Correo electronico -->
+        <div class="formulario__grupo" id="grupo__correo">
+            <label for="correo" class="formulario__label">Correo Electronico</label>
+            <div class="formulario__grupo-input">
+                <input type="email" class="formulario__input" name="correo" id="correo"
+                    placeholder="correo@correo.com">
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">El correo solo puede tener letras, numeros y guion bajo.</p>
+        </div>
+
+        <!-- Boton Telefono -->
+        <div class="formulario__grupo" id="grupo__telefono">
+            <label for="telefono" class="formulario__label">Telefono</label>
+            <div class="formulario__grupo-input">
+                <input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="4556-6487">
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">El Telefono solo puede tener numeros.</p>
+        </div>
+        <!-- Grupo terminos y condiciones -->
+        <div class="formulario__grupo" id="grupo__terminos">
+            <label class="formulario__label">
+                <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+                Acepto terminos y condiciones
+            </label>
+        </div>
+        <div class="formulario__mensaje" id="formulario__mensaje">
+            <p><i class="fas fa-exclamation-triangle"></i><b>Error</b> Por favor rellene el formulario completo</p>
+        </div>
+        <div class="formulario__grupo formulario__grupo-btn-enviar">
+            <button type="submit" class="formulario__btn">Enviar</button>
+            <p class="formulario__exito" id="formulario__exito">Formulario enviado exitosamente</p>
+        </div>
+
+
+
+
+
+    </form>
+
+    <br><br><br><br><br><br>
+
+    <script src="js/formulario.js"></script>
+    <script src="http://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <!-- fin formulario -->
+      <br><br><br><br><br><br>
+
+    </main>
+
+    <footer class="pie">
+      <h1>RedTur</h1>
+      <h5>Ley 24.240</h5>
+      <h5>Autoridad Nacional de aplicación</h5>
+      <h5>Defensa de las y los Consumidores. Para reclamos ingrese aquí</h5>
+      <h5>DENUNCIA CONTRA UNA AGENCIA</h5>
+      <h5>Copyright © Redtur 2023 - Todos los derechos reservados.</h5>
+      <h5>Bettina Magrini - Alejandro Bianchi SH Leg. 6316
+        Cuit: 30-71069831-3
+        Teléfono: (011) 4522-1343
+        Email: redtur@redtur.com.ar
+        Franklin Roosevelt 4999, Villa Urquiza, Ciudad de Buenos Aires.</h5>
+
+    </footer>
+
+    <footer class="media">
+
+      <nav class="navegacion">
+        <div class="redes-sociales">
+          <a href="https://www.instagram.com">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://www.tiktok.com">
+            <i class="fab fa-tiktok"></i>
+        </div>
+      </nav>
+    </footer>
+
+  </div>
+</body>
+
+</html>

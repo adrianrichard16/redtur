@@ -1,0 +1,440 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(241, 229, 229);
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+}
+
+.contenedor {
+
+    display: grid;
+    
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, auto);
+    
+
+    grid-template-areas: "encabezado encabezado encabezado"
+        "botonera botonera dos"        
+        "contenido contenido contenido"
+        "contenido contenido contenido"
+        "contenido contenido contenido"
+        "pie pie media";
+}
+
+.contenedor>div,
+.contenedor .encabezado .contenedor .directorio .contenedor .botonera .contenedor .slide .contenedor .contenido .contenedor .media .contenedor .tamano .dos .contenedor .pie {
+    padding: 20px;
+    border-radius: 4px;
+}
+
+/* head global */
+.contenedor .encabezado {
+    background: rgb(241, 229, 229);
+    color: #fff;
+    grid-area: encabezado;
+    margin: 0px;
+    /* align-items: start;
+    text-align: center; */
+    margin-bottom: 0px;
+}
+
+
+
+/* head logo */
+.encabezado img {
+    max-width: 300px;
+    /* max-height: 1000px; */
+    margin: 1px;
+    text-align: start;
+    padding-bottom: 1px;
+}
+
+
+.contenedor .directorio {
+    background: rgb(241, 229, 229);
+    grid-area: directorio;
+    align-items: center;
+
+}
+
+.contenedor .directorio {
+
+    text-align: right;
+    /* padding: 3px; */
+}
+
+.contenedor .directorio ul {
+    background: rgb(241, 229, 229);
+    display: inline-block;
+    padding-left: 1px;
+    justify-content: space-between;
+    margin-bottom: 1px;
+    margin-top: 1px;
+    text-align: center;
+}
+
+.contenedor .directorio li {
+    color: rgb(110, 16, 16);
+    flex: 1 0 auto;
+    text-align: left;
+    display: inline-block;
+    justify-content: space-between;
+    width: 80px;
+    padding-left: 1px;
+    text-align: left;
+}
+
+
+/* todos los contenedore .botonera */
+.contenedor .botonera {
+    background: rgb(110, 16, 16);
+    grid-area: botonera;
+    padding-top: 5px;
+
+}
+
+
+.contenedor .botonera {
+    font-size: 1.5em;
+
+
+}
+
+.contenedor .botonera ul {
+    background: rgb(110, 16, 16);
+    display: inline-block;
+    padding-left: 5px;
+    justify-content: space-between;
+    margin-bottom: 1px;
+    margin-top: 1px;
+    border-radius: 1px;
+
+
+}
+
+.contenedor .botonera li {
+
+    text-align: center;
+    display: inline-block;
+    border-radius: 10px;
+    justify-content: space-between;
+
+
+}
+
+.contenedor .botonera li a:hover {
+    background: rgba(255, 0, 0, 0.2);
+    border-radius: 10px;
+    
+}
+
+.contenedor .botonera li a {
+    display: auto;
+    text-decoration: none;
+    color: white;
+    padding: 0em 0em;
+    border: 1.5px outset rgb(128, 6, 6, 0.500);
+    border-radius: 10px;
+    padding: 1px;
+    font-family: 'josefin sans'
+
+}
+
+.contenedor .dos {
+    grid-area: dos;
+    background: rgb(110, 16, 16);
+    text-align: right;
+    display: inline-block;
+    justify-content: space-between;
+    padding-right: 10px;
+    
+
+
+}
+
+.contenedor .dos ul {
+    background: rgb(110, 16, 16);
+    display: inline-block;
+    padding-left: 5px;
+    justify-content: space-between;
+    margin-bottom: 1px;
+    margin-top: 1px;
+    border-radius: 1px;
+
+
+
+}
+
+.contenedor .dos li {
+
+    text-align: center;
+    display: inline-block;
+    border-radius: 10px;
+    justify-content: space-between;
+
+
+}
+
+.contenedor .dos li a:hover {
+    background: hsl(0, 36%, 27%);
+    border-radius: 10px;
+}
+
+.contenedor .dos li a {
+    display: flex;
+    text-decoration: none;
+    color: white;
+    margin-left: 20px;
+
+}
+
+/* fin contenedores botonera */
+
+
+/* comienza productos */
+.contenedor .contenido {
+    background: rgb(241, 229, 229);
+    color: #000000;
+    grid-area: contenido;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'josefin sans';
+
+    /* Animacion Fade -in */
+    opacity: 0;
+    animation-name: fade-in;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Fin animacion Fade-in */
+
+.contenedor .productos {
+    text-align: center;
+    
+}
+.producto .foticos{
+    display: flex;  
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    max-width: 70%;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    
+   
+   
+    
+    
+    
+
+
+}
+
+/* es .producto controla el orden de cada producto que se muestra */
+.contenedor .producto {
+    max-width: 80%;    
+    margin-bottom: 20px;
+    align-content: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+    font-family: 'Playfair-Display';
+    background: white;
+    display: inline-block;    
+    height: auto;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.contenedor .producto:hover {
+    transform: translateY(-5px);
+}
+
+.contenedor .producto img {
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+}
+
+.contenedor .producto h3 {
+    font-size: 24px;
+    margin-top: 10px;
+
+    font-family: 'Work Sans', sans-serif'
+
+
+}
+
+.contenedor .producto p {
+    margin-top: 10px;
+    font-size: 17.5px;
+    line-height: 1.5;
+
+}
+
+/* esto maneja el diseño de ver detalles */
+.contenedor .articulos .producto a {
+    background-color: rgb(219, 93, 93);
+    color: #fff;
+    display: inline-block;
+    padding: 1rem 7rem;
+    text-align: center;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    justify-content: space-between;
+    font-family: 'josefin sans';
+}
+
+/* fin productos */
+/* comienza el footer */
+.contenedor .pie {
+    background: hsl(0, 88%, 10%);
+    color: #fff;
+    grid-area: pie;
+    padding: 10px;
+    text-align: auto;
+    margin-top: 100px;
+    text-align: left;
+    font-family: 'josefin sans';
+    word-spacing: 2px;
+    line-height: 1.5em;
+}
+
+
+.contenedor .media {
+    background: hsl(0, 88%, 10%);
+    color: #fff;
+    grid-area: media;
+    align-items: center;
+    position: relative;
+    margin-top: 99.9px;
+}
+
+
+.footer .media {
+    text-align: center;
+    background: hsl(0, 88%, 10%);
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+}
+
+/* Redes Sociales */
+
+.media .redes-sociales {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    align-items: center;
+    background: hsl(0, 88%, 10%);
+    position: relative;
+    top: 50px;
+}
+
+.media .redes-sociales a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color: #993434;
+    text-decoration: none;
+}
+
+.media .redes-sociales a:last-of-type {
+    margin-right: 0;
+}
+
+.media .redes-sociales a i {
+    font-size: 40px;
+    color: #fff;
+}
+
+.footer .media h3 {
+    text-align: center;
+}
+
+
+/* fin footer */
+
+
+/* de aca para abajo cuestiones solo de cortes */
+
+
+@media screen and (max-width: 768px) {
+    .contenedor {
+        grid-template-areas: "encabezado encabezado encabezado"
+            "botonera botonera botonera"
+            "slayer slayer slayer"
+            "contenido contenido contenido"
+            "pie pie pie"
+            "media media directorio";
+    }
+
+    .contenedor {
+        text-align: center;
+    }
+
+    .contenedor .directorio {
+        background-color: hsl(0, 38%, 36%);
+    }
+
+    .contenedor .directorio ul {
+        background: hsl(0, 38%, 36%);
+
+    }
+
+    .contenedor .directorio li {
+        color: hsl(0, 38%, 36%);
+    }
+
+    .contenedor .media {
+
+        background: hsl(0, 38%, 36%);
+    }
+
+    .media .redes-sociales {
+        background: hsl(0, 38%, 36%);
+    }
+
+    .contenedor .directorio ul {
+        text-align: center;
+    }
+
+    @media screen and (max-width: 450px) {
+        .contenedor {
+            grid-template-areas: "encabezado encabezado encabezado"
+                "directorio directorio directorio"
+                "botonera botonera botonera"
+                "contenido contenido contenido"
+                "slayer slayer slayer"
+                "pie media media";
+        }
+
+        .contenedor {
+            text-align: center;
+        }
+    }}
